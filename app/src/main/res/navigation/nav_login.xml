@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_login"
+    app:startDestination="@id/faqMvpFragment">
+
+    <fragment
+        android:id="@+id/faqMvpFragment"
+        android:name="kz.just_code.mvvm.mvp.MovieMvpFragment"
+        android:label="FaqMvpFragment" >
+        <action
+            android:id="@+id/action_faqMvpFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/faqMvvmFragment"
+        android:name="kz.just_code.mvvm.mvvm.MovieMvvmFragment"
+        android:label="FaqMvvmFragment" >
+        <action
+            android:id="@+id/action_faqMvvmFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="kz.just_code.mvvm.MovieDetailsFragment"
+        android:label="MovieDetailsFragment" >
+        <argument
+            android:name="movieItem"
+            app:argType="kz.just_code.mvvm.repository.Movie" />
+    </fragment>
+</navigation>
