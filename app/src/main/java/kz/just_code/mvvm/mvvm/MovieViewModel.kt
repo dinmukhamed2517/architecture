@@ -11,8 +11,8 @@ class MovieViewModel(
 ):ViewModel() {
 
 
-    private var _faqListLiveData= MutableLiveData<List<Movie>>()
-    var faqListLiveData:LiveData<List<Movie>> = _faqListLiveData
+    private var _movieListLiveData= MutableLiveData<List<Movie>>()
+    var movieListLiveData:LiveData<List<Movie>> = _movieListLiveData
 
     init {
         getData()
@@ -20,6 +20,6 @@ class MovieViewModel(
 
     private fun getData(){
         val data = repository.getFaqList()
-        _faqListLiveData.postValue(data)
+        _movieListLiveData.postValue(data)
     }
 }

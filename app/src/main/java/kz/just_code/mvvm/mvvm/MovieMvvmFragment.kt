@@ -36,7 +36,7 @@ class MovieMvvmFragment:Fragment(){
                 MovieMvvmFragmentDirections.actionFaqMvvmFragmentToMovieDetailsFragment(it)
             )
         }
-        viewModel.faqListLiveData.observe(viewLifecycleOwner){
+        viewModel.movieListLiveData.observe(viewLifecycleOwner){
             adapter.submitList(it)
         }
     }
